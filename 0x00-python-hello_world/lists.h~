@@ -1,0 +1,6 @@
+#ifndef LISTS1_H
+#define LISTS1_H
+
+int check_cycle(listint_t *list);
+
+#endif
