@@ -5,4 +5,4 @@ for i in reversed(range(97, 123)):
         j = i
     else:
         j = i - 32
-    print(chr(j), end='')
+    print("{}".format(chr(j)), end='')

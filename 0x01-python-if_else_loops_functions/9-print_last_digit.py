@@ -2,5 +2,5 @@
 def print_last_digit(number):
     str = repr(number)
     digit = str[-1]
-    print(digit, end='')
+    print("{}".format(digit), end='')
     return digit
