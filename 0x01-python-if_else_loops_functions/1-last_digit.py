@@ -5,10 +5,10 @@ strr = repr(number)
 dig = int(strr[-1])
 if number < 0:
     dig = dig * -1
-print(f"Last digit of {number} is {dig} and is ", end='')
+print("Last digit of {} is {} and is ".format(number, dig), end='')
 if dig > 5:
     print("greater than 5")
 elif dig == 0:
-    print("and is 0")
+    print("0")
 else:
     print("less than 6 and not 0")
