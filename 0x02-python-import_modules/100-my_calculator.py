@@ -4,7 +4,7 @@ if __name__ == "__main__":
     from sys import argv
     ln = len(argv)
     # print(ln, '=', argv[2])
-    ls = ['+', '-', '*', '/']
+    ls = ["+", "-", "*", "/"]
     if (ln != 4):
         print("Usage: ./100-my_calculator.py <a> <oprator> <b>")
         exit(1)
@@ -15,11 +15,11 @@ if __name__ == "__main__":
         a = int(argv[1])
         b = int(argv[3])
         if argv[2] == '+':
-            print("{} + {} = {}".format(a, b, add(a, b)))
+            print("{} {} {} = {}".format(a, argv[2], b, add(a, b)))
         elif argv[2] == '-':
-            print("{} + {} = {}".format(a, b, sub(a, b)))
+            print("{} {} {} = {}".format(a, argv[2], b, sub(a, b)))
         elif argv[2] == '*':
-            print("{} + {} = {}".format(a, b, mul(a, b)))
+            print("{} {} {} = {}".format(a, argv[2], b, mul(a, b)))
         elif argv[2] == '/':
-            print("{} + {} = {}".format(a, b, div(a, b)))
+            print("{} {} {} = {}".format(a, argv[2], b, div(a, b)))
         exit(0)

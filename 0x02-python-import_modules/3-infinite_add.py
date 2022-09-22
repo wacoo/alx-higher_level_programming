@@ -2,7 +2,6 @@
 if __name__ == "__main__":
     from sys import argv
     res = 0
-    for arg in argv:
-        if arg.isdigit():
-            res = res + int(arg)
-    print(res)
+    for i in range(1, len(argv)):
+        res = res + int(argv[i])
+    print("{}".format(res))
