@@ -6,7 +6,7 @@ if __name__ == "__main__":
     # print(ln, '=', argv[2])
     ls = ["+", "-", "*", "/"]
     if (ln != 4):
-        print("Usage: ./100-my_calculator.py <a> <oprator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     elif argv[2] not in ls:
         print("Unknown operator. Available operators: +, -, * and /")
