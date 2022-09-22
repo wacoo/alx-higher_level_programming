@@ -4,21 +4,19 @@ if __name__ == "__main__":
     from sys import argv
     ln = len(argv)
     # print(ln, '=', argv[2])
+    ls = ['+', '-', '*', '/']
     if (ln != 4):
         print("Usage: ./100-my_calculator.py <a> <oprator> <b>")
         exit(1)
-    elif argv[2] != '+' and argv[2] != '-':
-        print("Unknown operator. Available operators: , -, * and /")
-        exit(1)
-    elif argv[2] != '*' and argv[2] != '/':
-        print("Unknown operator. Available operators: , -, * and /")
+    elif argv[2] not in ls:
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     else:
         a = int(argv[1])
         b = int(argv[3])
         if argv[2] == '+':
             print("{} + {} = {}".format(a, b, add(a, b)))
-        elif argv[2] == "-":
+        elif argv[2] == '-':
             print("{} + {} = {}".format(a, b, sub(a, b)))
         elif argv[2] == '*':
             print("{} + {} = {}".format(a, b, mul(a, b)))
