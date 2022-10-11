@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-Square = __import__('102-square').Square
+Square = __import__('101-square').Square
 
 s_5 = Square(5)
 s_6 = Square(6)
