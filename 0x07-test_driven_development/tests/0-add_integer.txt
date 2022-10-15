@@ -1,0 +1,50 @@
+This is a test for the ``0-add_integer`` function
+===============================================
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Using ``add_integer()``
+===================
+
+Normal integert test:
+>>> add_integer(5,6)
+11
+
+Float number test:
+>>> add_integer(5.6,6)
+11
+
+Float test:
+>>> add_integer(5.6,6.7)
+11
+
+Float test:
+>>> add_integer(5.6,6)
+11
+
+String test:
+>>> add_integer('d',6)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/project_exercise/test/0-add_integer.py", line 13, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+
+String test:
+>>> add_integer(7,'g')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/project_exercise/test/0-add_integer.py", line 15, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+
+String test:
+>>> add_integer('d','f')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/project_exercise/test/0-add_integer.py", line 13, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+
+Zero test:
+>>> add_integer(4,0)
+4
