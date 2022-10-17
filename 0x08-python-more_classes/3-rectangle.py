@@ -33,7 +33,6 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-
         self.__width = value
 
     @property
@@ -56,7 +55,7 @@ class Rectangle:
 
     def perimeter(self):
         """calculate perimeter"""
-        if (self.__width == 0 or self.__height == 0):
+        if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
@@ -69,5 +68,6 @@ class Rectangle:
             for i in range(self.__height):
                 for j in range(self.__width):
                     r.append('#')
-                r.append("\n")
+                if i != self.__height -1:
+                    r.append("\n")
             return ("". join(r))
