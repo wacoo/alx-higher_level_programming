@@ -9,9 +9,13 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """ Init a rectangle"""
-        if type(width) != int:
+        if isinstance(int(width), int):
+            width = int(width)
+        if isinstance(int(height), int):
+            height = int(height)
+        if type(int(width)) != int:
             raise TypeError("width must be an integer")
-        elif type(height) != int:
+        elif type(int(height)) != int:
             raise TypeError("height must be an integer")
         if width < 0:
             raise ValueError("width must be >= 0")
@@ -71,3 +75,7 @@ class Rectangle:
                 if i != self.__height - 1:
                     r.append("\n")
             return ("". join(r))
+
+    def __repr__(self):
+        """ print rectangle with repr"""
+        return "Rectangle({}, {}".format(self.__width, self.__height) + ")"
