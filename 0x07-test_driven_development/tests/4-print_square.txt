@@ -1,0 +1,30 @@
+Testing ``print_square`` program
+================================
+Import:
+>>> print_quare = __import__("4-print_square").print_square #doctest: +IGNORE_RESULT
+
+Integer test:
+>>> print_square(4) #doctest: +IGNORE_RESULT
+####
+####
+####
+####
+
+Float test:
+>>> print_square(4.5) #doctest: +IGNORE_RESULT
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-test_driven_development/4-print_square.py", line 6, in print_square
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+Negative float test:
+>>> print_square(-4.5) #doctest: +IGNORE_RESULT
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-test_driven_development/4-print_square.py", line 6, in print_square
+    raise TypeError("size must be an integer")
+TypeError: size must be an integer
+
+Zero test:
+>>> print_square(0) #doctest: +IGNORE_RESULT
