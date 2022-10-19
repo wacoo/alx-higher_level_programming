@@ -1,0 +1,28 @@
+Test file for ``say_my_name``
+===========================
+Import code:
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+String name and last name:
+>>> say_my_name("Wonde", "Abre")
+My name is Wonde Abre
+
+Number last name:
+>>> say_my_name("Wonde", 2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-test_driven_development/3-say_my_name.py", line 8, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+
+Number first name:
+>>> say_my_name(45, "Abre")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x07-test_driven_development/3-say_my_name.py", line 6, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
+String number first name:
+>>> say_my_name('45', "Abre")
+My name is 45 Abre
