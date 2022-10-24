@@ -1,0 +1,145 @@
+3 items had no tests:
+    1-my_list
+    1-my_list.MyList
+    1-my_list.MyList.print_sorted
+0 tests in 3 items.
+0 passed and 0 failed.
+Test passed.
+Trying:
+    MyList = __import__('1-my_list').MyList
+Expecting nothing
+ok
+Trying:
+    my_list = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list.append(1)
+Expecting nothing
+ok
+Trying:
+    my_list.append(4)
+Expecting nothing
+ok
+Trying:
+    my_list.append(2)
+Expecting nothing
+ok
+Trying:
+    my_list.append(3)
+Expecting nothing
+ok
+Trying:
+    my_list.append(5)
+Expecting nothing
+ok
+Trying:
+    print(my_list)
+Expecting:
+    [1, 4, 2, 3, 5]
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    [1, 2, 3, 4, 5]
+ok
+Trying:
+    print(my_list)
+Expecting:
+    [1, 4, 2, 3, 5]
+ok
+Trying:
+    MyList = __import__('1-my_list').MyList
+Expecting nothing
+ok
+Trying:
+    my_list2.print_sorted()
+Expecting:
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    NameError: name 'my_list2' is not defined
+ok
+Trying:
+    a = [1, 9, 4]
+Expecting nothing
+ok
+Trying:
+    my_list = MyList(a)
+Expecting nothing
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    [1, 4, 9]
+ok
+Trying:
+    a = []
+Expecting nothing
+ok
+Trying:
+    my_list = MyList(a)
+Expecting nothing
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    []
+    Unique number:
+**********************************************************************
+File "tests/1-my_list.txt", line 34, in 1-my_list.txt
+Failed example:
+    my_list.print_sorted()
+Expected:
+    []
+    Unique number:
+Got:
+    []
+Trying:
+    my_list = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list.append(1)
+Expecting nothing
+ok
+Trying:
+    my_list.print_sorted()
+Expecting:
+    [1]
+ok
+Trying:
+    print(my_list)
+Expecting:
+    [1]
+ok
+Trying:
+    my_list2 = MyList()
+Expecting nothing
+ok
+Trying:
+    my_list2.append(1)
+Expecting nothing
+ok
+Trying:
+    my_list2.append(1)
+Expecting nothing
+ok
+Trying:
+    my_list2.append(1)
+Expecting nothing
+ok
+Trying:
+    my_list2.append(1)
+Expecting nothing
+ok
+Trying:
+    my_list2.print_sorted()
+Expecting:
+    [1, 1, 1, 1]
+ok
+**********************************************************************
+1 items had failures:
+   1 of  28 in 1-my_list.txt
+28 tests in 1 items.
+27 passed and 1 failed.
+***Test Failed*** 1 failures.
