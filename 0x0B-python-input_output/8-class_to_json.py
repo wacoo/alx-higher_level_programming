@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ convert class arguments to json file"""
-import json
 
 
 def class_to_json(obj):
