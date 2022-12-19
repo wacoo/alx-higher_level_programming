@@ -2,10 +2,9 @@
 
 /* Prints the first argument passed to it */
 
-const noArgs = (process.argv.length) - 2;
 const args = process.argv;
-if (noArgs <= 0) {
-  console.log('No argument');
-} else {
+if (args[2]) {
   console.log(args[2]);
+} else {
+  console.log('No argument');
 }
