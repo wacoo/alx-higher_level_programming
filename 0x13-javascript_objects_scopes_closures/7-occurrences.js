@@ -1,4 +1,4 @@
-#!/usr/bin/none
+#!/usr/bin/node
 
 /* Returns number of ocurrences in the a list */
 exports.nbOccurences = function (list, searchElement) {
