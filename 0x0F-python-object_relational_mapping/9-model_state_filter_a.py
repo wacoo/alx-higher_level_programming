@@ -15,3 +15,4 @@ if __name__ == '__main__':
         .order_by(State.id.asc())
     for r in res:
         print(str(r.id) + ": " + r.name)
+    session.close()
