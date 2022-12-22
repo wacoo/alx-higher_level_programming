@@ -17,3 +17,4 @@ if __name__ == '__main__':
         print(str(first.id) + ": " + first.name)
     else:
         print("Nothing")
+    session.close()
