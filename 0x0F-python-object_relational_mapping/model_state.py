@@ -21,7 +21,7 @@ class State(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128))
 
-    def __init__(self, :name):
+    def __init__(self, name):
         """ inits the State object"""
         #self.id = uuid.uuid4()
         self.name = name
