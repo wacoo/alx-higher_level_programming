@@ -10,9 +10,10 @@ if __name__ == '__main__':
     c = db.cursor()
     c.execute("""SELECT DISTINCT cities.name FROM cities, states WHERE
               cities.state_id = (SELECT id FROM states WHERE states.name =
-              %(states.name)s)""", {'states.name': argv[4]})
+              %s)""", (argv[4],))
     res = c.fetchall()
     lst = list(res)
     st = ', '.join([x[0] for x in lst])
     print(st)
+    c.close()
     db.close()
