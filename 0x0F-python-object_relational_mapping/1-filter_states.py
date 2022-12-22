@@ -12,3 +12,4 @@ if __name__ == '__main__':
     res = db.store_result()
     for r in res.fetch_row(maxrows=0):
         print(r)
+    db.close()

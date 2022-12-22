@@ -8,7 +8,7 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], db=argv[3])
     c = db.cursor()
-    c.execute("""SELECT DISTINCT cities.name FROM cities, states WHERE
+    c.execute("""SELECT cities.name FROM cities WHERE
               cities.state_id = (SELECT id FROM states WHERE states.name =
               %s)""", (argv[4],))
     res = c.fetchall()
