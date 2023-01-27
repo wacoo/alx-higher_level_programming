@@ -6,5 +6,5 @@ import requests
 from sys import argv
 
 data = {'email:' argv[2]}
-r = requests.post(argv[1], params=data)
+r = requests.post(argv[1], data=data)
 print("Your email is: {}".format(r.text))
