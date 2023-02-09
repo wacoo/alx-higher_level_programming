@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /*
- * show all characters in a give movie (API).
+ * show all characters in a give movie in the right order (API).
  */
 const request = require('request');
 const arg = process.argv;
