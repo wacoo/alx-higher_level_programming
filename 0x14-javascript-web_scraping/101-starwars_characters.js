@@ -3,21 +3,21 @@
  * show all characters in a give movie in the right order (API).
  */
 const request = require('request');
-const arg = process.argv;
-const film = `https://swapi-api.alx-tools.com/api/films/${arg[2]}`;
-
-request(film, function (err, res, body) {
-  if (err) {
-    console.error(err);
-  }
-  const chars = JSON.parse(body).characters;
-
-  for (const cha in chars) {
-    request(chars[cha], function (err2, res2, act) {
-      if (err2) {
-        console.error(err2);
-      }
-      console.log(JSON.parse(act).name);
-    });
+const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+request(url, function (error, response, body) {
+  if (!error) {
+    const characters = JSON.parse(body).characters;
+    printCharacters(characters, 0);
   }
 });
+
+function printCharacters (characters, index) {
+  request(characters[index], function (error, response, body) {
+    if (!error) {
+      console.log(JSON.parse(body).name);
+      if (index + 1 < characters.length) {
+        printCharacters(characters, index + 1);
+      }
+    }
+  });
+}

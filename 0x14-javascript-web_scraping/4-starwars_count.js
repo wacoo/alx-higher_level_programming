@@ -3,21 +3,13 @@
  * count the number of movies in which Wedge Antilles is present for API.
  */
 const request = require('request');
-const arg = process.argv;
-const actor = 'https://swapi-api.alx-tools.com/api/people/18/';
-
-request(arg[2], function (err, res, body) {
-  if (err) {
-    console.error(err);
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const results = JSON.parse(body).results;
+    console.log(results.reduce((count, movie) => {
+      return movie.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1
+        : count;
+    }, 0));
   }
-  const resl = JSON.parse(body).results;
-  let count = 0;
-
-  for (let i = 0; i < resl.length; i++) {
-    const chara = resl[i].characters;
-    if (chara.indexOf(actor) !== -1) {
-      count++;
-    }
-  }
-  console.log(count);
 });
